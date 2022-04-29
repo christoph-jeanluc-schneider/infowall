@@ -9,6 +9,7 @@ function init_cicle() {
     SW_DAY = inMillisecods( times.nightEnd );
     SW_NIGHT = inMillisecods( times.sunset );
     console.log(
+        "sunrise / sunset:",
         dayjs( times.nightEnd ).format( "HH:mm" ), "/",
         dayjs( times.sunset ).format( "HH:mm" ) );
 }
