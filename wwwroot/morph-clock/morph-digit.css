@@ -1,0 +1,198 @@
+.morph-clock {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-items: center;
+}
+
+.morph-digit {
+    display: inline-block;
+    width: 8em;
+    height: 11em;
+    padding: 0 0.5em;
+}
+
+.morph-digit .row {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1em;
+    margin-bottom: 0.25em;
+}
+
+.morph-digit .line {
+    display: block;
+    position: absolute;
+    background-color: #333;
+    border-radius: 0.4em;
+    height: 1em;
+    -webkit-transition: all 0.5s cubic-bezier(0, 0.7, 0.3, 1);
+    transition: all 0.5s cubic-bezier(0, 0.7, 0.3, 1);
+}
+
+.morph-digit .line.left {
+    left: 0%;
+    right: 55%;
+}
+.morph-digit .line.right {
+    left: 55%;
+    right: 0%;
+}
+
+/* - - 0 - - */
+.morph-digit.is-0 .row .line.left { left: 0%; right: 58% }
+.morph-digit.is-0 .row .line.right { left: 58%; right: 0% }
+.morph-digit.is-0 .row-1 .line.left { left: 15%; right: 15% }
+.morph-digit.is-0 .row-1 .line.right { left: 15%; right: 15% }
+.morph-digit.is-0 .row-2 .line.left { right: 15% }
+.morph-digit.is-0 .row-2 .line.right { left: 15% }
+.morph-digit.is-0 .row-10 .line.left { right: 15% }
+.morph-digit.is-0 .row-10 .line.right { left: 15% }
+.morph-digit.is-0 .row-11 .line.left { left: 15%; right: 15% }
+.morph-digit.is-0 .row-11 .line.right { left: 15%; right: 15% }
+
+/* - - 1 - - */
+.morph-digit.is-1 .row .line { left: 25%; right: 25% }
+.morph-digit.is-1 .row-1 .line { left: 35% }
+.morph-digit.is-1 .row-2 .line { left: 15% }
+.morph-digit.is-1 .row-3 .line { left: 0% }
+.morph-digit.is-1 .row-10 .line,
+.morph-digit.is-1 .row-11 .line { left: 0%; right: 0% }
+
+/* - - 2 - - */
+.morph-digit.is-2 .row .line { left: 0%; right: 0% }
+.morph-digit.is-2 .row-1 .line,
+.morph-digit.is-2 .row-7 .line { right: 15% }
+.morph-digit.is-2 .row-4 .line { left: 55% }
+.morph-digit.is-2 .row-5 .line { left: 15% }
+.morph-digit.is-2 .row-8 .line { right: 55% }
+
+/* - - 3 - - */
+.morph-digit.is-3 .row .line { left: 0%; right: 0% }
+.morph-digit.is-3 .row-1 .line,
+.morph-digit.is-3 .row-6 .line,
+.morph-digit.is-3 .row-11 .line { right: 15% }
+.morph-digit.is-3 .row-5 .line,
+.morph-digit.is-3 .row-6 .line,
+.morph-digit.is-3 .row-7 .line { left: 15% }
+.morph-digit.is-3 .row-4 .line,
+.morph-digit.is-3 .row-8 .line { left: 55% }
+
+/* - - 4 - - */
+.morph-digit.is-4 .row .line.left { left: 0%; right: 60% }
+.morph-digit.is-4 .row .line.right,
+.morph-digit.is-4 .row-8 .line.left,
+.morph-digit.is-4 .row-9 .line.left,
+.morph-digit.is-4 .row-10 .line.left,
+.morph-digit.is-4 .row-11 .line.left { left: 60%; right: 0% }
+.morph-digit.is-4 .row-1 .line.left { left: 15% }
+.morph-digit.is-4 .row-7 .line.left { left: 15%; right: 0% }
+.morph-digit.is-4 .row-6 .line.left { left: 0%; right: 0% }
+
+/* - - 5 - - */
+.morph-digit.is-5 .row .line { left: 0%; right: 0% }
+.morph-digit.is-5 .row-7 .line { left: 15% }
+.morph-digit.is-5 .row-4 .line { right: 55% }
+.morph-digit.is-5 .row-5 .line { right: 15% }
+.morph-digit.is-5 .row-8 .line { left: 55% }
+
+/* - - 6 - - */
+.morph-digit.is-6 .row .line { left: 0%; right: 0% }
+.morph-digit.is-6 .row-1 .line { left: 15% }
+.morph-digit.is-6 .row-4 .line { right: 55% }
+.morph-digit.is-6 .row-5 .line { right: 15% }
+.morph-digit.is-6 .row-8 .line.left { left: 0%; right: 65% }
+.morph-digit.is-6 .row-8 .line.right { left: 65%; right: 0% }
+.morph-digit.is-6 .row-11 .line { left: 15%; right: 15% }
+
+/* - - 7 - - */
+.morph-digit.is-7 .row .line { left: 25%; right: 25% }
+.morph-digit.is-7 .row-1 .line,
+.morph-digit.is-7 .row-2 .line,
+.morph-digit.is-7 .row-3 .line { left: 0%; right: 0% }
+.morph-digit.is-7 .row-4 .line,
+.morph-digit.is-7 .row-5 .line { left: 55%; right: 0% }
+.morph-digit.is-7 .row-6 .line,
+.morph-digit.is-7 .row-7 .line { left: 40%; right: 12% }
+
+/* - - 8 - - */
+.morph-digit.is-8 .row .line { left: 0%; right: 0% }
+.morph-digit.is-8 .row-4 .line.left,
+.morph-digit.is-8 .row-8 .line.left { left: 0%; right: 65% }
+.morph-digit.is-8 .row-4 .line.right,
+.morph-digit.is-8 .row-8 .line.right { left: 65%; right: 0% }
+.morph-digit.is-8 .row-1 .line,
+.morph-digit.is-8 .row-6 .line,
+.morph-digit.is-8 .row-11 .line { left: 15%; right: 15% }
+
+/* - - 9 - - */
+.morph-digit.is-9 .row .line { left: 0%; right: 0% }
+.morph-digit.is-9 .row-4 .line.left { left: 0%; right: 65% }
+.morph-digit.is-9 .row-4 .line.right { left: 65%; right: 0% }
+.morph-digit.is-9 .row-1 .line,
+.morph-digit.is-9 .row-7 .line,
+.morph-digit.is-9 .row-9 .line,
+.morph-digit.is-9 .row-10 .line,
+.morph-digit.is-9 .row-11 .line { left: 15% }
+.morph-digit.is-9 .row-1 .line,
+.morph-digit.is-9 .row-11 .line { right: 15% }
+.morph-digit.is-9 .row-8 .line { left: 65% }
+
+/* - - divider - - */
+.morph-digit.is-divider { 
+    width: 3em;
+}
+.morph-digit.is-divider .row .line { left: 0%; right: 0% }
+.morph-digit.is-divider .row-1,
+.morph-digit.is-divider .row-2,
+.morph-digit.is-divider .row-3,
+.morph-digit.is-divider .row-4,
+.morph-digit.is-divider .row-8 { visibility: hidden; }
+@keyframes divider_animation {
+  0%   {
+      left: 0%; right: 0%
+  }
+  5%  {
+      left: 3%; right: -3%
+  }
+  10%  {
+      left: -3%; right: 3%
+  }
+  15% {
+      left: 0%; right: 0%
+  }
+  100% {
+      left: 0%; right: 0%
+  }
+}
+@keyframes divider_animation_inv {
+  0%   {
+      left: 0%; right: 0%
+  }
+  5%  {
+      left: -3%; right: 3%
+  }
+  10%  {
+      left: 3%; right: -3%
+  }
+  15% {
+      left: 0%; right: 0%
+  }
+  100% {
+      left: 0%; right: 0%
+  }
+}
+.morph-digit.is-divider .row .line {
+  animation-name: divider_animation;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.morph-digit.is-divider .row-9 .line,
+.morph-digit.is-divider .row-10 .line,
+.morph-digit.is-divider .row-11 .line { animation-name: divider_animation_inv }
+.morph-digit.is-divider .row-5 .line { animation-delay: 0s }
+.morph-digit.is-divider .row-6 .line { animation-delay: 0.1s }
+.morph-digit.is-divider .row-7 .line { animation-delay: 0.2s }
+.morph-digit.is-divider .row-9 .line { animation-delay: 2.2s }
+.morph-digit.is-divider .row-10 .line { animation-delay: 2.1s }
+.morph-digit.is-divider .row-11 .line { animation-delay: 2.0s }

@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "BalooTamma2";
+    src: url("../fonts/BalooTamma2.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    font-family: "BalooTamma2", "Ubuntu", "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
+    cursor: none;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    font-size: 1.25vw;
+    opacity: 0.8;
+}
+
+#container.day .morph-clock .morph-digit .line {
+    background-color: black;
+}
+#container.night .morph-clock .morph-digit .line {
+    background-color: white;
+}
